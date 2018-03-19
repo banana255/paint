@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>香蕉的画图工具</title>
+        <link rel="icon" href="image/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="index.css"
+        >
+        <!-- js 文件 -->
+        <script src='js/utils.js'></script>
+        <script src='js/object.js'></script>
+        <script src='js/point.js'></script>
+        <script src='js/size.js'></script>
+        <script src='js/color.js'></script>
+        <script src='js/canvas.js'></script>
+    </head>
+    <body>
+    <div id="app">
+        <header class="main">
+            <h1 class="title">bananass.jpg</h1>
+            <ul class="menus">
+                <li><a href="javascript:;" class="download" title="下载">Save</a></li>
+                <li><a href="//bananass.cc" target="_blank" title="博客">Blog</a></li>
+                <li><a href="https://github.com/bigbanan" target="_blank">GitHub</a></li>
+                <li><a href="mailto:bigbananaS@qq.com" target="_blank">Email</a></li>
+            </ul>
+        </header>
+
+        <section class="main">
+            <div class="controls">
+                <div data-type="back" class="feature" title="撤销"><img src="image/back.png" width="100%" height="100%"></div>
+                <div data-type="clear" class="feature" title="清空"><img src="image/clear.png" width="100%" height="100%"></div>
+                <div data-type="line" class="feature" title="直线"><img src="image/line.png" width="100%" height="100%"></div>
+                <div data-type="pencil" class="feature" title="铅笔"><img src="image/pencil.png" width="100%" height="100%"></div>
+                <div data-type="rect" class="feature" title="矩形"><img src="image/rect.png" width="100%" height="100%"></div>
+                <div data-type="circle" class="feature" title="圆"><img src="image/circle.png" width="100%" height="100%"></div>
+                <div data-type="zoomIn" class="feature" title="放大"><img src="image/zoom_in.png" width="100%" height="100%"></div>
+                <div data-type="zoomOut" class="feature" title="缩小"><img src="image/zoom_out.png" width="100%" height="100%"></div>
+                <!--<div data-status="smallPoint" class="status" title="小点"><img src="image/small_point.png" width="100%" height="100%"></div>-->
+                <!--<div data-status="bigPoint" class="status" title="大点"><img src="image/big_ponit.png" width="100%" height="100%"></div>-->
+            </div>
+        </section>
+
+        <div id="sketch">
+            <canvas id="id-paint" width="600" height="400"></canvas>
+        </div>
+
+        <footer class="main">
+            <div class="colors">
+                <div id="id-color-current" style="background: rgb(0, 0, 0);"></div>
+
+                <div class="color" data-color="#000000"></div>
+                <div class="color" data-color="#8b8275"></div>
+                <div class="color" data-color="#8c040a"></div>
+                <div class="color" data-color="#8b8218"></div>
+                <div class="color" data-color="#108213"></div>
+                <div class="color" data-color="#118275"></div>
+                <div class="color" data-color="#020a75"></div>
+                <div class="color" data-color="#8c0d75"></div>
+                <div class="color" data-color="#8b8235"></div>
+                <div class="color" data-color="#044236"></div>
+                <div class="color" data-color="#1682fc"></div>
+                <div class="color" data-color="#064276"></div>
+                <div class="color" data-color="#8c25fc"></div>
+                <div class="color" data-color="#8b420e"></div>
+                <div class="color" data-color="#ffffff"></div>
+                <div class="color" data-color="#c8c2ba"></div>
+                <div class="color" data-color="#fd0d1b"></div>
+                <div class="color" data-color="#fffe38"></div>
+                <div class="color" data-color="#29fe2f"></div>
+                <div class="color" data-color="#2dffff"></div>
+                <div class="color" data-color="#0b24fc"></div>
+                <div class="color" data-color="#fd29fd"></div>
+                <div class="color" data-color="#fffe75"></div>
+                <div class="color" data-color="#2afe76"></div>
+                <div class="color" data-color="#8bffff"></div>
+                <div class="color" data-color="#8c83fd"></div>
+                <div class="color" data-color="#fd1476"></div>
+                <div class="color" data-color="#fe8235"></div>
+            </div>
+        </footer>
+    </div>
+    </body>
+
+    <!--入口文件-->
+    <script src="js/index.js"></script>
+</html>
+
