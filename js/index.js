@@ -47,10 +47,10 @@ const bindStatus = (canvas) => {
         this.classList.add('status-active')
         switch (status) {
             case 'smallPoint':
-                canvas.pen = Pen.small
+                canvas.pensize = Pen.small
                 break
             case 'bigPoint':
-                canvas.pen = Pen.big
+                canvas.pensize = Pen.big
                 break
         }
     })

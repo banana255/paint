@@ -34,8 +34,6 @@ class Canvas extends NewObject {
         // 系统停机开关
         this._end = this.noop
         
-        this.pen = Pen.small
-        
         // 保存每一次操作改变的座标信息
         this._history = []
         // 当前操作中改变的座标信息
@@ -52,6 +50,7 @@ class Canvas extends NewObject {
         this.e = {}
         // 是否需要刷新
         this.new = false
+        this.pensize = Pen.small
         
         this.run()
     }
@@ -176,7 +175,15 @@ class Canvas extends NewObject {
         let p = point
         if (p.x >= 0 && p.x <= w) {
             if (p.y >= 0 && p.y <= h) {
-                this._setPixel(p.x, p.y, color)
+                if(this.pensize == Pen.small) {
+                    this._setPixel(p.x, p.y, color)
+                } else {
+                    for (let i = 0; i < 8; i++) {
+                        for (let j = 0; j < 8; j++) {
+                            this._setPixel(p.x-4+i, p.y-4+j, color)
+                        }
+                    }
+                }
             }
         }
     }
